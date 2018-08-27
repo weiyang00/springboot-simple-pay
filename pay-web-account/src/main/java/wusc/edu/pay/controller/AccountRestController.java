@@ -12,8 +12,10 @@ import wusc.edu.pay.facade.account.service.AccountQueryFacade;
 @RestController
 public class AccountRestController {
 
-    @Reference(version = "1.0.0")
-    AccountQueryFacade accountQueryFacade;
+
+    @Reference(interfaceName="wusc.edu.pay.facade.account.service.AccountQueryFacade" ,version = "1.0.0")
+    private AccountQueryFacade accountQueryFacade;
+
 
     @RequestMapping(value = "/api/account", method = RequestMethod.GET)
     public Account findOneCity(@RequestParam(value = "accountNo", required = true) String accountNo) {

@@ -14,7 +14,7 @@ import org.springframework.cache.annotation.EnableCaching;
 @SpringBootApplication
 // mapper 接口类扫描包配置
 @MapperScan("wusc.edu.pay.core.account.dao")
-//@EnableCaching // 启动缓存
+@EnableCaching // 启动缓存
 public class Application {
 
 	public static void main(String[] args) {

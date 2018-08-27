@@ -59,7 +59,7 @@ public interface AccountQueryFacade {
 	 * @return account 查询到的账户信息.
 	 * @throws AccountBizException
 	 */
-	Account getAccountByAccountNo(String accountNo) throws AccountBizException;
+		Account getAccountByAccountNo(String accountNo) throws AccountBizException;
 
 	/**
 	 * 日汇总账户待结算金额 .
