@@ -20,9 +20,10 @@ public class AccountRestController {
 
 
     @RequestMapping(value = "/api/user", method = RequestMethod.GET)
-    public UserInfo findOneCity(@RequestParam(value = "userNo", required = true) String userNo ,
-                               @RequestParam(value = "accountNo", required = true) String accountNo ) {
-        System.out.println("accountNo === " + userNo);
+    public UserInfo findOneCity( String userNo , String accountNo ) {
+        System.out.println("starting -----------------" );
+        System.out.println("userNo === " + userNo);
+        System.out.println("accountNo == " + accountNo);
         UserInfo userInfo = null;
         if (null != accountNo){
             userInfo = userQueryFacade.getUserInfoByAccountNo(accountNo);

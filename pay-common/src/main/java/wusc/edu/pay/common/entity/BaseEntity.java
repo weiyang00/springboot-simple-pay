@@ -16,7 +16,7 @@ public class BaseEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Column(name = "ID")
 	private Long id;
-	@Column(name = "VSERSION")
+	@Column(name = "VERSION")
 	private Integer version = 0;
 	/**
 	 * 创建时间

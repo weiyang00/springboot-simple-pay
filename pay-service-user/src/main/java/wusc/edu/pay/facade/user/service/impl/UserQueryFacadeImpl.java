@@ -10,10 +10,12 @@ import com.alibaba.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import tk.mybatis.mapper.entity.Example;
 import wusc.edu.pay.common.page.PageBean;
 import wusc.edu.pay.common.page.PageParam;
 import wusc.edu.pay.core.user.dao.UserInfoDao;
 import wusc.edu.pay.core.user.dao.UserRelationDao;
+import wusc.edu.pay.facade.account.entity.Account;
 import wusc.edu.pay.facade.user.entity.UserInfo;
 import wusc.edu.pay.facade.user.entity.UserRelation;
 import wusc.edu.pay.facade.user.exceptions.UserBizException;
@@ -57,7 +59,11 @@ public class UserQueryFacadeImpl implements UserQueryFacade {
 	 * @return
 	 */
 	public UserInfo getUserInfoByAccountNo(String accountNo) {
-		return userInfoDao.getUserInfoByAccountNo(accountNo);
+		Example example = new Example(UserInfo.class);
+		Example.Criteria criteria = example.createCriteria();
+		criteria.andEqualTo("accountNo", accountNo);// 条件相等
+		System.out.println("-----------dao---------- accountNo === " + accountNo);
+		return userInfoDao.selectByExample(example).get(0);
 	}
 
 	/***
@@ -67,7 +73,11 @@ public class UserQueryFacadeImpl implements UserQueryFacade {
 	 * @return
 	 */
 	public UserInfo getUserInfoByUserNo(String userNo) {
-		return userInfoDao.getUserInfoByUserNo(userNo);
+		Example example = new Example(UserInfo.class);
+		Example.Criteria criteria = example.createCriteria();
+		criteria.andEqualTo("userNo", userNo);// 条件相等
+		System.out.println("-----------dao---------- accountNo === " + userNo);
+		return userInfoDao.selectByExample(example).get(0);
 	}
 
 	/***

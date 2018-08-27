@@ -10,7 +10,7 @@
 
 	<groupId>wusc.edu.pay.facade</groupId>
 	<artifactId>pay-facade-user</artifactId>
-	<version>${pay-facade-user.version}</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>pay-facade-user</name>
@@ -31,19 +31,7 @@
 		<dependency>
 			<groupId>wusc.edu.pay.facade</groupId>
 			<artifactId>pay-facade-account</artifactId>
-			<version>${pay-facade-account.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>wusc.edu.pay.facade</groupId>
-			<artifactId>pay-facade-settlement</artifactId>
-			<version>${pay-facade-settlement.version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>wusc.edu.pay.facade</groupId>
-			<artifactId>pay-facade-limit</artifactId>
-			<version>${pay-facade-limit.version}</version>
+			<version>1.0-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>

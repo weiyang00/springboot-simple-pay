@@ -40,7 +40,7 @@ public class UserInfo extends BaseEntity {
 	@Column(name = "ANSWER")
 	private String answer;
 	/** 绑定手机号码 **/
-	@Column(name = "BINDNOBILENO")
+	@Column(name = "BINDMOBILENO")
 	private String bindMobileNo;
 	/** 绑定邮箱 **/
 	@Column(name = "BINDEMAIL")
