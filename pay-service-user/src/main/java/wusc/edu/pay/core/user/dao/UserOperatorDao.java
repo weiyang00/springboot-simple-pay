@@ -7,13 +7,13 @@ import wusc.edu.pay.facade.user.entity.UserOperator;
 
 
 /**
- * 
+ *
  * @描述: 用户操作员表数据访问层接口.
  * @作者: WuShuicheng .
  * @创建时间: 2013-8-6,下午3:50:29 .
  * @版本: 1.0 .
  */
-public interface UserOperatorDao extends BaseDao<UserOperator> {
+public interface UserOperatorDao  {
 
 	/**
 	 * 根据登录名获取用户操作员信息.<br/>
@@ -45,7 +45,7 @@ public interface UserOperatorDao extends BaseDao<UserOperator> {
 
 	/***
 	 * @Description: 根据商户编号和类型查询操作员表
-	 * @return UserOperator  
+	 * @return UserOperator
 	 * @throws
 	 * @author Huang Bin
 	 * @date 2015-4-7

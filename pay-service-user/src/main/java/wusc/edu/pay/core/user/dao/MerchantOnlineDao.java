@@ -6,9 +6,12 @@ package wusc.edu.pay.core.user.dao;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.ibatis.annotations.Mapper;
 import wusc.edu.pay.common.core.dao.BaseDao;
+import wusc.edu.pay.common.core.tk.TplDataService;
 import wusc.edu.pay.common.page.PageBean;
 import wusc.edu.pay.common.page.PageParam;
+import wusc.edu.pay.facade.user.entity.MerchantFile;
 import wusc.edu.pay.facade.user.entity.MerchantOnline;
 
 
@@ -20,7 +23,8 @@ import wusc.edu.pay.facade.user.entity.MerchantOnline;
  * @版本: V1.0
  * 
  */
-public interface MerchantOnlineDao extends BaseDao<MerchantOnline> {
+@Mapper
+public interface MerchantOnlineDao extends TplDataService<MerchantOnline> {
 
 	/**
 	 * 根据商户编号获取在线支付商户信息.

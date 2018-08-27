@@ -11,15 +11,15 @@ import wusc.edu.pay.facade.user.exceptions.UserBizException;
  * @author Peter
  *
  */
-public interface UserBankAccountDao extends BaseDao<UserBankAccount>{
-	
+public interface UserBankAccountDao {
+
 	/**
 	 * 根据商户编号获取结算银行卡信息
 	 * @param userNo
 	 * @return
 	 */
 	public UserBankAccount getSettlementBankAccountByMerchantUserNo(String userNo);
-	
+
 	/**
 	 * 根据会员编号获取用户快捷支付银行卡账户信息列表
 	 * @param paramMap
@@ -27,7 +27,7 @@ public interface UserBankAccountDao extends BaseDao<UserBankAccount>{
 	 * @throws UserBizException
 	 */
 	public List<UserBankAccount> listFastBankAccountByMemberUserNo(String userNo);
-	
+
 	/**
 	 * 根据会员编号获取会员结算银行卡账户信息列表
 	 * @param paramMap
@@ -35,7 +35,7 @@ public interface UserBankAccountDao extends BaseDao<UserBankAccount>{
 	 * @throws UserBizException
 	 */
 	public List<UserBankAccount> listSettlementBankAccountByMemberUserNo(String userNo);
-	
+
 	/**
 	 * 根据银行卡账号、用户编号获取银行卡信息
 	 * @param bankAccountNo
@@ -44,7 +44,7 @@ public interface UserBankAccountDao extends BaseDao<UserBankAccount>{
 	 * @throws UserBizException
 	 */
 	public UserBankAccount getByBankAccountNoAndUserNo(String bankAccountNo,String userNo);
-	
+
 	/**
 	 * 根据用户名称、银行卡号、证件账号修改银行账户信息
 	 * @param userName 用户名称

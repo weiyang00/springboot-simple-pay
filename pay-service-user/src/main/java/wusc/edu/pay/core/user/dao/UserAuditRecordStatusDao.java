@@ -5,14 +5,14 @@ import wusc.edu.pay.facade.user.entity.UserAuditRecordStatus;
 
 
 /***
- * 
+ *
  * @描述: 用户状态审核表数据访问层接口.
  * @作者: Lanzy.
  * @创建时间: 2014-6-16, 下午5:12:30 .
  * @版本: V1.0.
- * 
+ *
  */
-public interface UserAuditRecordStatusDao extends BaseDao<UserAuditRecordStatus> {
+public interface UserAuditRecordStatusDao  {
 
 	/**
 	 * 根据userNo、auditStatus查询用户状态表更表

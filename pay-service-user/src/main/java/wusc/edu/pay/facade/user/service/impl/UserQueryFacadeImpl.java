@@ -6,6 +6,7 @@ package wusc.edu.pay.facade.user.service.impl;
 import java.util.List;
 import java.util.Map;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -30,7 +31,7 @@ import wusc.edu.pay.facade.user.service.UserQueryFacade;
  * @author Hill
  * @version 2014-5-29
  */
-@Component("userQueryFacade")
+@Service(version="1.0.0")
 public class UserQueryFacadeImpl implements UserQueryFacade {
 
 	@Autowired
@@ -98,7 +99,7 @@ public class UserQueryFacadeImpl implements UserQueryFacade {
 	 * @throws UserBizException
 	 */
 	public PageBean listUserInfoListPage(PageParam pageParam, Map<String, Object> paramMap) throws UserBizException {
-		return userInfoDao.listPage(pageParam, paramMap);
+		return null;
 	}
 
 	/**

@@ -2,7 +2,10 @@ package wusc.edu.pay.core.user.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Mapper;
 import wusc.edu.pay.common.core.dao.BaseDao;
+import wusc.edu.pay.common.core.tk.TplDataService;
+import wusc.edu.pay.facade.user.entity.MerchantOnline;
 import wusc.edu.pay.facade.user.entity.UserInfo;
 import wusc.edu.pay.facade.user.exceptions.UserBizException;
 
@@ -13,7 +16,8 @@ import wusc.edu.pay.facade.user.exceptions.UserBizException;
  * @author huangbin
  * 
  */
-public interface UserInfoDao extends BaseDao<UserInfo> {
+@Mapper
+public interface UserInfoDao extends TplDataService<UserInfo> {
 
 	/***
 	 * 根据绑定邮箱号查询用户信息

@@ -5,15 +5,15 @@ import wusc.edu.pay.facade.user.entity.UserRelation;
 
 
 /***
- * 
- * 
+ *
+ *
  * @author chenjianhua
- * 
+ *
  */
-public interface UserRelationDao extends BaseDao<UserRelation> {
+public interface UserRelationDao  {
 
 	/**
-	 * 
+	 *
 	 * @param parentUserNo
 	 * @param childUserNo
 	 * @return

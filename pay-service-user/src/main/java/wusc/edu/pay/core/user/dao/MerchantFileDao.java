@@ -1,6 +1,9 @@
 package wusc.edu.pay.core.user.dao;
 
+import org.apache.ibatis.annotations.Mapper;
 import wusc.edu.pay.common.core.dao.BaseDao;
+import wusc.edu.pay.common.core.tk.TplDataService;
+import wusc.edu.pay.facade.user.entity.MerchantAction;
 import wusc.edu.pay.facade.user.entity.MerchantFile;
 
 
@@ -10,7 +13,8 @@ import wusc.edu.pay.facade.user.entity.MerchantFile;
  * @author huangbin
  * 
  */
-public interface MerchantFileDao extends BaseDao<MerchantFile> {
+@Mapper
+public interface MerchantFileDao extends TplDataService<MerchantFile> {
 
 	/***
 	 * 根据商户编号查询资质文件信息

@@ -11,7 +11,7 @@
 
 	<groupId>wusc.edu.pay.service</groupId>
 	<artifactId>pay-service-user</artifactId>
-	<version>${pay-service-user.version}</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>pay-service-user</name>
@@ -123,11 +123,15 @@
 			<groupId>wusc.edu.pay.common</groupId>
 			<artifactId>pay-common</artifactId>
 			<version>${pay-common.version}</version>
+			<exclusions>
+				<exclusion> <groupId>org.slf4j</groupId> <artifactId>slf4j-log4j12</artifactId></exclusion>
+				<exclusion> <groupId>log4j</groupId> <artifactId>log4j</artifactId> </exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>wusc.edu.pay.common</groupId>
 			<artifactId>pay-common-config</artifactId>
-			<version>${env}-${pay-common-config.version}</version>
+			<version>${pay-common-config.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>wusc.edu.pay.common</groupId>
@@ -140,62 +144,7 @@
 			<artifactId>pay-facade-user</artifactId>
 			<version>${pay-facade-user.version}</version>
 		</dependency>
-		
-		<dependency>
-			<groupId>wusc.edu.pay.facade</groupId>
-			<artifactId>pay-facade-settlement</artifactId>
-			<version>${pay-facade-settlement.version}</version>
-		</dependency>
-		
-		<!-- Spring Dependency Begin -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- Spring Dependency End -->
 
-		<!-- dubbo required jars start -->
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.jboss.netty</groupId>
-			<artifactId>netty</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>dubbo</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.zookeeper</groupId>
-			<artifactId>zookeeper</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.101tec</groupId>
-			<artifactId>zkclient</artifactId>
-		</dependency>
-		<!-- dubbo required jars end -->
-
-		<!-- 多线程测试工具 Begin -->
-		<dependency>
-			<groupId>fakepath</groupId>
-			<artifactId>groboutils-core</artifactId>
-			<version>5</version>
-			<scope>test</scope>
-		</dependency>
-		<!-- 多线程测试工具 End -->
 
 	</dependencies>
 
