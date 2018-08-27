@@ -13,7 +13,7 @@ import wusc.edu.pay.facade.account.service.AccountQueryFacade;
 public class AccountRestController {
 
 
-    @Reference(interfaceName="wusc.edu.pay.facade.account.service.AccountQueryFacade" ,version = "1.0.0")
+    @Reference(version = "1.0.0")
     private AccountQueryFacade accountQueryFacade;
 
 

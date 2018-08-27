@@ -26,7 +26,7 @@ import wusc.edu.pay.facade.account.vo.DailyCollectAccountHistoryVo;
  * 
  */
 @org.springframework.stereotype.Service
-@Service(interfaceName="wusc.edu.pay.facade.account.service.AccountQueryFacade" ,version="1.0.0")
+@Service(version="1.0.0")
 public class AccountQueryFacadeImpl implements AccountQueryFacade {
 
 	@Autowired

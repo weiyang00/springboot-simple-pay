@@ -36,3 +36,5 @@ mvnw.cmd
 application-dev.yml
 */application-dev.*
 application-dev.*
+*/application-db.*
+application-db.*

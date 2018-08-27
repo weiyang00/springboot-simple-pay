@@ -2,11 +2,15 @@ package wusc.edu.pay.facade.user.entity;
 
 import wusc.edu.pay.common.entity.BaseEntity;
 
+import javax.persistence.Column;
+import javax.persistence.Table;
+
 /***
  * 在线用户表
  * @author huangbin,WuShuicheng.
  * @desc TableName TBL_USER_INFO
  */
+@Table(name = "TBL_USER_INFO")
 public class UserInfo extends BaseEntity {
 
 	/**
@@ -15,45 +19,64 @@ public class UserInfo extends BaseEntity {
 	private static final long serialVersionUID = 3419062567494966598L;
 	
 	/** 账户编号 **/
+	@Column(name = "ACCOUNTNO")
 	private String accountNo;
 	/** 用户编号 **/
+	@Column(name = "USERNO")
 	private String userNo;
 	/** 登录名 **/
+	@Column(name = "LOGINNAME")
 	private String loginName;
 	/** 用户类型 引用UserTypeEnum **/
+	@Column(name = "USERTYPE")
 	private Integer userType;
 	/** 预留信息 **/
+	@Column(name = "GREETING")
 	private String greeting;
 	/** 安全保护问题 **/
+	@Column(name = "QUESTION")
 	private String question;
 	/** 问题答案 **/
+	@Column(name = "ANSWER")
 	private String answer;
 	/** 绑定手机号码 **/
+	@Column(name = "BINDNOBILENO")
 	private String bindMobileNo;
 	/** 绑定邮箱 **/
+	@Column(name = "BINDEMAIL")
 	private String bindEmail;
 	/** 省份 **/
+	@Column(name = "PROVINCE")
 	private String province;
 	/** 所属地区 **/
+	@Column(name = "CITY")
 	private String city;
 	/** 所属区域 **/
+	@Column(name = "AREA")
 	private String area;
 	/** 真实名字  (会员：真实名，商户：FullName)**/
+
+	@Column(name = "REALNAME")
 	private String realName;
 	
 	/** 身份证号码**/
+	@Column(name = "CARDNO")
 	private String cardNo;
 	
 	/** 状态**/
+	@Column(name = "STATUS")
 	private Integer status;
 	
 	/** 是否邮箱验证(100:是,101:否,默认值为101) **/
+	@Column(name = "ISEMAILAUTH")
 	private Integer isEmailAuth;
 	
 	/** 是否手机验证(100:是,101:否,默认值为101) **/
+	@Column(name = "ISMOBILEAUTH")
 	private Integer isMobileAuth;
 	
 	/** 是否实名认证(100:是,101:否, 默认值为101) **/
+	@Column(name = "ISREALNAMEAUTH")
 	private Integer isRealNameAuth;
 	
 	/**

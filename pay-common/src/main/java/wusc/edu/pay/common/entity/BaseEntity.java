@@ -1,5 +1,6 @@
 package wusc.edu.pay.common.entity;
 
+import javax.persistence.Column;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -13,11 +14,14 @@ import java.util.Date;
 public class BaseEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	@Column(name = "ID")
 	private Long id;
+	@Column(name = "VSERSION")
 	private Integer version = 0;
 	/**
 	 * 创建时间
 	 */
+	@Column(name = "CREATETIME")
 	protected Date createTime = new Date();
 
 	public Long getId() {

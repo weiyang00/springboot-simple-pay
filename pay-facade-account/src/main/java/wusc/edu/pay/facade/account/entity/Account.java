@@ -3,6 +3,7 @@
  */
 package wusc.edu.pay.facade.account.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import wusc.edu.pay.common.entity.BaseEntity;
@@ -10,58 +11,82 @@ import wusc.edu.pay.common.utils.number.AmountUtil;
 import wusc.edu.pay.facade.account.enums.AccountStatusEnum;
 import wusc.edu.pay.facade.account.exception.AccountBizException;
 
+import javax.persistence.Column;
+import javax.persistence.Table;
+
 
 /**
  * 
  * @author Administrator
  * 
  */
-public class Account extends BaseEntity {
+@Table(name = "TBL_ACCOUNT")
+public class Account implements Serializable{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Column(name = "ID")
+	private long accountid;
+
+
+	@Column(name = "VERSION")
+	private long accountversion;
+
+	@Column(name = "CREATETIME")
+	private Date createTime;
+
 	/**
 	 * 账户编号
 	 */
+	@Column(name = "ACCOUNTNO")
 	private String accountNo;
 	/**
 	 * 用户编号
 	 */
+	@Column(name = "USERNO")
 	private String userNo;
 	/**
 	 * 账户状态
 	 */
+	@Column(name = "STATUS")
 	private Integer status;
 	/**
 	 * 账户余额
 	 */
+	@Column(name = "BALANCE")
 	private Double balance = 0D;
 	/**
 	 * 不可用余额
 	 */
+	@Column(name = "UNBALANCE")
 	private Double unBalance = 0D;
 	/**
 	 * 保证金
 	 */
+	@Column(name = "SECURITYMONEY")
 	private Double securityMoney = 0D;
 	/**
 	 * 账户类型
 	 */
+	@Column(name = "ACCOUNTTYPE")
 	private Integer accountType;
 	/**
 	 * 最后更新时间
 	 */
+	@Column(name = "LASTTIME")
 	private Date lastTime = new Date();
 	/**
 	 * 可结算金额
 	 */
+	@Column(name = "AVAILABLESETTAMOUNT")
 	private Double availableSettAmount = 0D;
 	/**
 	 * 会计科目代码
 	 */
+	@Column(name = "ACCOUNTTITLENO")
 	private String accountTitleNo;
 
 	/**
@@ -318,6 +343,26 @@ public class Account extends BaseEntity {
 		} else {
 			return false;
 		}
+	}
+
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
+
+	public long getAccountid() {
+		return accountid;
+	}
+
+	public void setAccountid(long accountid) {
+		this.accountid = accountid;
+	}
+
+	public long getAccountversion() {
+		return accountversion;
+	}
+
+	public void setAccountversion(long accountversion) {
+		this.accountversion = accountversion;
 	}
 
 }
